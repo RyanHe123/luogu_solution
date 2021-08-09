@@ -1,8 +1,9 @@
 /*
 P1024 一元三次方程求解
 
-思路：零点存在定理，枚举，（二分法）
+思路：零点存在定理，枚举
 */
+
 
 #include<iostream>
 #include<stdio.h>
@@ -14,7 +15,7 @@ float judge_root(int i)
     float res = i;
     float last_value = 0;
     float value = 0;
-    while(res >= i - 1)
+    while(res >= i - 1) // 以0.01为间距进行查找
     {
         value = a * pow(res, 3) + b * pow(res, 2) + c * res + d;
         if(value == 0)
